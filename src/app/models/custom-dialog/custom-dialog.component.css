@@ -1,0 +1,36 @@
+/* Dialog Container */
+  .mat-mdc-dialog-container {
+    border-radius: 8px;
+    padding: 24px;
+    background-color: #f8f1e9; 
+  }
+  
+  /* Dialog Title */
+  .mat-mdc-dialog-title {
+    background-color: #3F5D45;
+    color: #f8f1e9; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  /* Dialog Content */
+  .mat-mdc-dialog-content {
+    color: #5a5a5a; /* 内容文字颜色 */
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+    /* margin-bottom: 10px; */
+  }
+  
+  /* Dialog Actions */
+  .mat-mdc-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+  button:hover {
+    background-color: #3f5d459f; 
+  }
+  

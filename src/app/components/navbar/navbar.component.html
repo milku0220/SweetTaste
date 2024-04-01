@@ -1,0 +1,33 @@
+
+<script src="https://kit.fontawesome.com/c0315309b1.js" crossorigin="anonymous"></script>
+
+<nav class="navbar navbar-expand-md">
+    <div class="container py-4">
+        <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo-all-dark.svg" class="d-none d-md-block" alt="Sweetaste Logo" height="40px">
+            <img src="assets/img/logotype-lg-dark.svg" class="d-block d-md-none" alt="Sweetaste Logo" height="18px"></a>
+        <a class="nav-link order-md-1" routerLink="/cart">
+            <i class="fa-solid fa-cart-shopping navbar-cart" style="color: #3F5D45;"></i>
+            <span *ngIf="cartItemCount > 0" class="cart-count-badge">{{ cartItemCount }}</span>
+        </a>
+        <div class="collapse navbar-collapse navbar-list" id="navbarNav">
+            <ul class="navbar-nav ml-auto navbar-fontsize">
+                <li class="nav-item mx-4">
+                    <a class="nav-link " routerLink="/" routerLinkActive="true">首頁</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link " routerLink="/products" routerLinkActive="true">甜點</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link " *ngIf="!IsLogin()" routerLink="/login" routerLinkActive="true">登入</a>
+
+                    <a class="nav-link " *ngIf="IsLogin()" (click)="Logout()" routerLink="/login" routerLinkActive="true">登出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

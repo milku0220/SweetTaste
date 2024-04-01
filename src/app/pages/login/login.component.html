@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetaste 會員登入</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c0315309b1.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="css/login.css"> -->
+</head>
+
+
+<body>
+    <!-- navbar -->
+    <!-- <nav class="navbar navbar-expand-md">
+        <div class="container py-4">
+            <button class="navbar-toggler ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-all-dark.svg" class="d-none d-md-block" alt="Sweetaste Logo" height="40px">
+                <img src="img/logotype-lg-dark.svg" class="d-block d-md-none" alt="Sweetaste Logo" height="18px"></a>
+            <a class="nav-link order-md-1" href="cart.html">
+                <i class="fa-solid fa-cart-shopping navbar-cart" style="color: #3F5D45;"></i>
+            </a>
+            <div class="collapse navbar-collapse navbar-list" id="navbarNav">
+                <ul class="navbar-nav ml-auto navbar-fontsize">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="products.html">甜點</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active" href="login.html">登入</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <div class="container">
+        <div class="row d-flex justify-content-center row-size">
+
+            <div class="row g-0 d-flex align-items-center p-0">
+                <div class="col-md-6">
+
+                    <!-- 分頁器 -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link"  [ngClass]="{'linkactive': selectedPage === 'login'}" (click)="selectedPage = 'login'">
+                                    登入
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link"  [ngClass]="{'linkactive': selectedPage === 'register'}" (click)="selectedPage = 'register'">
+                                    註冊
+                                </a>
+                            </li>
+                          </ul>
+                    </nav>
+
+                    <!-- 註冊會員 -->
+                    <div class="login" *ngIf="selectedPage === 'register'">
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <h1>會員註冊</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #EAF0ED;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col d-flex flex-column align-items-center d-block d-md-none">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="btn-group my-4" role="group">
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-facebook-logotype.svg" class="img-fluid"
+                                                            width="100px" style="min-height: 54px ;">
+                                                    </button>
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-google.svg" class="img-fluid" width="100px"
+                                                            style="min-height: 54px ;">
+                                                    </button>
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-yahoo.svg" class="img-fluid" width="100px"
+                                                            style="min-height: 54px ;">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form (submit)="onRegister()" #registerForm="ngForm">
+                        <div class="p-5 pt-4">
+                            
+                            <div class="d-flex justify-content-between" style="position: relative;">
+                                <label for="loginEmail" style="position: absolute; top: 22%; left: 5%;">
+                                    <i class="fa-solid fa-user" style="color: #3F5D45;"></i>
+                                </label>
+                                <input type="email" class="textbox form-control rounded-0 mb-3" 
+                                    [(ngModel)]="regName" name="regName" required
+                                    placeholder="電子信箱/手機號碼" >
+                            </div>
+                            <div class="d-flex justify-content-between" style="position: relative;">
+                                <label for="loginEmail" style="position: absolute; top: 27%; left: 5%;">
+                                    <i class="fa-solid fa-key" style="color: #3F5D45;"></i>
+                                </label>
+                                <input type="password" class="textbox form-control rounded-0"
+                                    [(ngModel)]="regPassword" name="regPassword" required
+                                    placeholder="輸入您的密碼" >
+                            </div>
+                            <div class="form-check mt-3">
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="login-btn">
+                            <button type="submit" class="btn btn-block rounded-0 login-btn-a" [disabled]="!registerForm.valid">
+                                註冊帳號
+                            </button>
+                        </div>
+                    
+                        </form>
+                        
+                    </div>
+
+                    <!-- 登入會員 -->
+                    <div class="login" *ngIf="selectedPage === 'login'" >
+                        <div class="row">
+                            <div class="col">
+                                <div class="text-center">
+                                    <h1>會員登入</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="background-color: #EAF0ED;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col d-flex flex-column align-items-center d-block d-md-none">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="btn-group my-4" role="group">
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-facebook-logotype.svg" class="img-fluid"
+                                                            width="100px" style="min-height: 54px ;">
+                                                    </button>
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-google.svg" class="img-fluid" width="100px"
+                                                            style="min-height: 54px ;">
+                                                    </button>
+                                                    <button type="button" class="btn rounded-0 connect-btn">
+                                                        <img src="assets/img/ic-yahoo.svg" class="img-fluid" width="100px"
+                                                            style="min-height: 54px ;">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form (submit)="callLogin()" #loginForm="ngForm">
+                        <div class="p-5 pt-4">
+                            
+                            <div class="d-flex justify-content-between" style="position: relative;">
+                                <label for="loginEmail" style="position: absolute; top: 22%; left: 5%;">
+                                    <i class="fa-solid fa-user" style="color: #3F5D45;"></i>
+                                </label>
+                                <input type="email" class="textbox form-control rounded-0 mb-3" 
+                                    [(ngModel)]="username" name="username" required
+                                    placeholder="電子信箱/手機號碼">
+                            </div>
+                            <div class="d-flex justify-content-between" style="position: relative;">
+                                <label for="loginEmail" style="position: absolute; top: 27%; left: 5%;">
+                                    <i class="fa-solid fa-key" style="color: #3F5D45;"></i>
+                                </label>
+                                <input type="password" class="textbox form-control rounded-0"
+                                    [(ngModel)]="password" name="password" required
+                                    placeholder="輸入您的密碼">
+                            </div>
+                            <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input rounded-0" name="remember" [(ngModel)]="remember">
+                                <label for="RememberMe" style="color: white;">記住我</label>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="login-btn">
+                            <button type="submit" class="btn btn-block rounded-0 login-btn-a" [disabled]="!loginForm.valid">
+                                登入帳號
+                            </button>
+                            
+                        </div>
+                    
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block" style="background-color: #EAF0ED;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col d-flex flex-column align-items-center">
+                                <h3 style="color:#8DA291; padding: 15px; padding-top: 30px;">連結社群帳戶</h3>
+                                <div class="row">
+                                    <div class="col-12 pb-3">
+                                        <button class="btn btn-block connect-btn p-0">
+                                            <img src="assets/img/ic-facebook-logotype.svg" class="img-fluid" width="100px"
+                                                style="min-height: 54px ;">
+                                        </button>
+                                    </div>
+                                    <div class="col-12 pb-3">
+                                        <button class="btn btn-block connect-btn p-0">
+                                            <img src="assets/img/ic-google.svg" class="img-fluid" width="100px"
+                                                style="min-height: 54px ;">
+                                        </button>
+                                    </div>
+                                    <div class="col-12 pb-3">
+                                        <button class="btn btn-block connect-btn p-0">
+                                            <img src="assets/img/ic-yahoo.svg" class="img-fluid" width="100px"
+                                                style="min-height: 54px ;">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <footer>
+        <section style="background-color: #3F5D45;">
+            <div class="container py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-5 col-12 d-flex align-items-center justify-content-center">
+                        <img src="img/logo-light.svg" width="40" class="mr-2">
+                        <span style="font-size: 24px; color: #EAF0ED;">訂閱你我甜蜜郵件</span>
+                    </div>
+                    <div class="col-md-5 col-12 d-flex">
+                        <div class="input-group justify-content-center">
+                            <span class="input-group-text rounded-0" id="basic-addon1"
+                                style="background-color:white; border-right:0">
+                                <i class="fa-solid fa-envelope" style="color: #3F5D45;"></i>
+                            </span>
+                            <input type="text" class="form-control rounded-0" placeholder="甜蜜聯絡信箱" aria-label="Username"
+                                aria-describedby="basic-addon1"
+                                style="background-color:white; border-left:0; max-width: 380px; height: 56px;">
+                            <button class="btn btn-warning rounded-0" type="button" id="button-addon2"><i
+                                    class="fa-solid fa-arrow-right" style="color: #000000;"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: #EAF0ED;">
+            <div class="container">
+                <div class="row py-5 justify-content-start">
+                    <div class="col-6 d-flex justify-content-between flex-column">
+                        <div><img src="img/logotype-lg-dark.svg" width="171"></div>
+                        <div class="d-flex flex-column footer-fontsize mt-3">
+                            <span>07-1234-5678</span>
+                            <span>sweetaste@email.com</span>
+                            <span>800 高雄市新興區幸福路 520 號</span>
+                        </div>
+                    </div>
+                    <div class="col-6 d-none d-md-block ">
+                        <div class="d-flex flex-row-reverse"><img src="img/sm-今天是個吃甜點的好日子.svg" height="218">
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4 justify-content-start">
+                    <div class="col-6">
+                        <a href="#" class="mr-1"><i class="fa-brands fa-square-instagram fa-2xl"
+                                style="color: #3F5D45;"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #3F5D45;"></i></a>
+                    </div>
+                    <div class="col-6 d-flex flex-row-reverse">
+                        <span class="d-none d-md-block footer-fontsize">© 2018 Sweetaste* All Rights Reserved</span>
+                    </div>
+                    <div class="d-block d-md-none mt-2 footer-fontsize">
+                        <span>© 2018 Sweetaste* All Rights Reserved</span>
+                    </div>
+                </div>
+        </section>
+    </footer> -->
+
+</body>

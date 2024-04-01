@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetaste 首頁</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c0315309b1.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <header>
+        <div class="container g-0 mb-5">
+            <div class="header-img"></div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row g-0 d-flex" style="margin-top: -90px;">
+                        <div class="col bg-cover" style="background-image: url('https://bit.ly/2QbVsVR');">
+                            <a [routerLink]="['/products']" [queryParams]="{category: 1, chName: '本日精選'}"
+                                class="btn rounded-0 header-btn btn-block header-btn-fontsize active btn-no-focus">本日精選</a>
+                        </div>
+                        <div class="col bg-cover"
+                            style="background-image: url('https://images.unsplash.com/photo-1525059337994-6f2a1311b4d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7ce5bbf66bdb4ed3b6965f0b3618aa43&auto=format&fit=crop&w=654&q=80');">
+                            <a [routerLink]="['/products']" [queryParams]="{category: 2, chName: '人氣推薦'}"
+                                class="btn rounded-0 header-btn btn-block header-btn-fontsize">人氣推薦</a>
+                        </div>
+                        <div class="col bg-cover" style="background-image: url('https://bit.ly/2R5tqwD');">
+                            <a [routerLink]="['/products']" [queryParams]="{category: 3, chName: '新品上市'}" 
+                                class="btn rounded-0 header-btn btn-block header-btn-fontsize">新品上市</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-9 d-block d-md-none">
+                <img src="assets/img/sm-橫式-為什麼選擇了做甜點.svg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- text section -->
+    <section class="my-5">
+
+        <div style="background-color: #EAF0ED;">
+
+            <div class="container g-0 content-picture" style="position: relative;">
+                <div class="row g-0 d-flex justify-content-around">
+                    <div class="col-md-5 col-12 bg-cover d-none d-md-block"
+                        style="background-image: url('https://bit.ly/2xPn7Eq'); height: 462px; margin: -24px;">
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <div class="container g-0">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class=" d-block d-md-none bg-cover"
+                                        style="background-image: url('https://bit.ly/2xPn7Eq'); width: 100%; height: 250px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="vertical-content">
+                                        <p>甜點帶來微笑，滋味撫慰心靈，是分享幸福的甜蜜語言。</p>
+                                        <p>創作甜點讓我融入無限想像，烘焙的過程如音樂，激發愉悅感，將甜蜜感動分享。</p>
+                                        <p>甜點是獨特的藝術，透過糕點與人連結，喚起味蕾記憶，為生活增添美味與喜悅。</p>
+                                    </div>
+                                    <div class="d-none d-md-block" style="margin-top: -24px;">
+                                        <img src="assets/img/lg-為什麼選擇了做甜點.svg" width="88">
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-9 d-block d-md-none">
+                <img src="assets/img/sm-橫式-為什麼一定要吃甜點.svg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <section class="my-5">
+        <div style="background-color: #EAF0ED;">
+            <div class="container g-0 content-picture" style="position: relative;">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-md-5 col-12 g-0">
+                        <div class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class=" d-block d-md-none bg-cover"
+                                        style="background-image: url('https://bit.ly/2zzAQS4'); width: 100%; height: 250px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="vertical-content">
+                                    <p>甜點帶來微笑，滋味撫慰心靈，是分享幸福的甜蜜語言。</p>
+                                    <p>創作甜點讓我融入無限想像，烘焙的過程如音樂，激發愉悅感，將甜蜜感動分享。</p>
+                                    <p>甜點是獨特的藝術，透過糕點與人連結，喚起味蕾記憶，為生活增添美味與喜悅。</p>
+                                </div>
+                                <div class="d-none d-md-block" style="margin-top: -24px;">
+                                    <img src="assets/img/lg-為什麼一定要吃甜點.svg" width="88">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-12 bg-cover d-none d-md-block"
+                        style="background-image: url('https://bit.ly/2zzAQS4'); height: 462px; margin: -24px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-10">
+        <div class="d-flex">
+            <div class="m-auto d-none d-md-block">
+                <img src="assets/img/lg-想吃甜點是不需要理由的.svg" width="100">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-9 d-block d-md-none">
+                <img src="assets/img/sm-橫式-想吃甜點是不需要理由的.svg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- product-card -->
+    <div class="container mt-5 pb-5">
+        <div class="row">
+            <div class="col-md-4 py-3" *ngFor="let product of productsList | slice:0:3">
+                <div class="card rounded-0" style="border: 1px solid rgba(181, 181, 181, 0.2);">
+                    <div class="product-card-tag">
+                        <span>{{product.chName}}</span>
+                    </div>
+                    <div class="bg-cover" [style.background-image]="'url(data:image/png;base64,' + product.img + ')'" style="height: 315px;">
+                        <label>
+                            <input type="checkbox" class="ui-checkbox">
+                            <i class="fa-solid fa-heart fa-lg starred-icon" style="color: #3F5D45;"></i>
+                            <i class="fa-regular fa-heart fa-lg unstarred-icon" style="color: #3F5D45;"></i>
+                        </label>
+                    </div>
+                    <div class="d-flex" style="height: 60px;">
+                        <div class="col product-card-fontsize"
+                            style="border-right: 1px solid rgba(181, 181, 181, 0.3);">{{product.name}}</div>
+                        <div class="col product-card-fontsize" style="font-weight: bold;">NT ${{product.price}}</div>
+                    </div>
+                    <div class="card-footer p-0" style="background: #EAF0ED;">
+                        <button class="btn btn-lg btn-block add-to-cart-btn" style="font-size: 24px; color: #3F5D45;"
+                        (click)="getInfoCart(product.productId, 1)">
+                            加入購物車
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4 py-3">
+                <div class="card rounded-0" style="border: 1px solid rgba(181, 181, 181, 0.2);">
+                    <div class="product-card-tag">
+                        <span>精選折扣</span>
+                    </div>
+                    <div class="bg-cover" style="background-image: url('https://bit.ly/2R5tqwD'); height: 315px;">
+                        <label>
+                            <input type="checkbox" class="ui-checkbox">
+                            <i class="fa-solid fa-heart fa-lg starred-icon" style="color: #3F5D45;"></i>
+                            <i class="fa-regular fa-heart fa-lg unstarred-icon" style="color: #3F5D45;"></i>
+                        </label>
+                    </div>
+                    <div class="d-flex" style="height: 60px;">
+                        <div class="col product-card-fontsize"
+                            style="border-right: 1px solid rgba(181, 181, 181, 0.3);">焦糖瑪卡龍</div>
+                        <div class="col product-card-fontsize" style="font-weight: bold;">NT $450</div>
+                    </div>
+                    <div class="card-footer p-0" style="background: #EAF0ED;">
+                        <a href="#" class="btn btn-lg btn-block" style="font-size: 24px; color: #3F5D45;">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3">
+                <div class="card rounded-0" style="border: 1px solid rgba(181, 181, 181, 0.2);">
+                    <div class="product-card-tag">
+                        <span>精選折扣</span>
+                    </div>
+                    <div class="bg-cover" style="background-image: url('https://bit.ly/2zBDAxX'); height: 315px;">
+                        <label>
+                            <input type="checkbox" class="ui-checkbox">
+                            <i class="fa-solid fa-heart fa-lg starred-icon" style="color: #3F5D45;"></i>
+                            <i class="fa-regular fa-heart fa-lg unstarred-icon" style="color: #3F5D45;"></i>
+                        </label>
+                    </div>
+                    <div class="d-flex" style="height: 60px;">
+                        <div class="col product-card-fontsize"
+                            style="border-right: 1px solid rgba(181, 181, 181, 0.3);">草莓蛋糕</div>
+                        <div class="col product-card-fontsize" style="font-weight: bold;">NT $450</div>
+                    </div>
+                    <div class="card-footer p-0" style="background: #EAF0ED;">
+                        <a href="#" class="btn btn-lg btn-block" style="font-size: 24px; color: #3F5D45;">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-3">
+                <div class="card rounded-0" style="border: 1px solid rgba(181, 181, 181, 0.2);">
+                    <div class="product-card-tag">
+                        <span>精選折扣</span>
+                    </div>
+                    <div class="bg-cover" style="background-image: url('https://bit.ly/2QiWeQW'); height: 315px;">
+                        <label>
+                            <input type="checkbox" class="ui-checkbox">
+                            <i class="fa-solid fa-heart fa-lg starred-icon" style="color: #3F5D45;"></i>
+                            <i class="fa-regular fa-heart fa-lg unstarred-icon" style="color: #3F5D45;"></i>
+                        </label>
+                    </div>
+                    <div class="d-flex" style="height: 60px; ">
+                        <div class="col product-card-fontsize"
+                            style="border-right: 1px solid rgba(181, 181, 181, 0.3);">健康奶酪</div>
+                        <div class="col product-card-fontsize" style="font-weight: bold;">NT$ 500</div>
+                    </div>
+                    <div class="card-footer p-0" style="background: #EAF0ED;">
+                        <a href="#" class="btn btn-lg btn-block" style="font-size: 24px; color: #3F5D45;">加入購物車</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <footer>
+    </footer> -->
+
+</body>
+
+</html>

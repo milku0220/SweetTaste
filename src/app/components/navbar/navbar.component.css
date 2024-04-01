@@ -1,0 +1,17 @@
+.navbar-nav {
+    --bs-nav-link-color: #9aae9e;
+    --bs-nav-link-hover-color: #3F5D45;
+    font-weight: 600;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: 37px;  
+    right: 95px;  
+    background-color: rgb(255, 166, 0);  
+    color: white;
+    padding: 1px 4px;
+    border-radius: 50%; 
+    font-size: 0.55rem; 
+  }
+  

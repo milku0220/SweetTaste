@@ -1,0 +1,170 @@
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+}
+
+/* navbar */
+
+.navbar-nav {
+    --bs-nav-link-color: #9aae9e;
+    --bs-nav-link-hover-color: #3F5D45;
+    font-weight: 600;
+}
+
+@media (min-width:768px) {
+    .navbar-cart {
+        margin: 0 24px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar-cart {
+        margin-right: 16px;
+    }
+
+    .navbar-list {
+        margin-top: 16px;
+    }
+}
+
+/* header */
+
+.header {
+    height: 496px;
+}
+
+.header-img {
+    background-image: url('https://images.unsplash.com/photo-1512484457149-266d165a4eca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=786581a33fd6c9343735655439ce2e5a&auto=format&fit=crop&w=1380&q=80');
+}
+
+.header-text{
+    height: 328px;
+}
+
+@media (max-width: 768px){
+    .header {
+        height: 277px;
+    }
+    .header-text{
+        height: 218px;
+    }
+
+}
+
+/* content-list */
+
+.content-list-title {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #3F5D45;
+    margin: 0;
+    height: 65px;
+}
+
+.list-a {
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid rgba(163, 163, 163, 0.3);
+}
+
+.list-group-item {
+    color: #3F5D45;
+}
+
+.list-group-item:hover {
+    background-color: #EAF0ED;
+}
+
+.list-group-item.active {
+    border-color: rgba(163, 163, 163, 0.3);
+    color: #3F5D45;
+    background-color: #EAF0ED;
+}
+
+.list-group-soldout {
+    border-color: rgba(163, 163, 163, 0.3);
+    background-color: rgba(163, 163, 163, 0.3);
+    color: #3F5D45;
+}
+
+/* content-product-card */
+
+.product-card-fontsize {
+    display: flex;
+    color: #3F5D45;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card-tag {
+    position: absolute;
+    background-color: #3F5D45;
+    width: 36px;
+    height: 106px;
+    top: 0;
+    left: 20px;
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3px;
+    color: white;
+}
+
+/*愛心標記*/
+
+.starred-icon {
+    opacity: 0;
+}
+
+input.ui-checkbox {
+    height: 0;
+    width: 0;
+}
+
+.ui-checkbox:checked+.starred-icon {
+    opacity: 1;
+}
+
+.starred-icon, .unstarred-icon {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    cursor: pointer;
+}
+
+/* content-pagination */
+
+.page-link {
+    background-color: white;
+    color: #3F5D45;
+}
+
+.page-link.active, .pagination .page-item.active .page-link {
+    background-color: #3F5D45;
+    color: white;
+}
+  
+
+/* footer */
+
+.footer-fontsize {
+    font-size: 16px;
+    color: #3F5D45;
+}
+
+/* add to cart  */
+.add-to-cart-btn {
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #D1E8D7; 
+    color: #2E4A35; 
+}

@@ -1,0 +1,282 @@
+/* navbar */
+
+.navbar-nav {
+    --bs-nav-link-color: #9aae9e;
+    --bs-nav-link-hover-color: #3F5D45;
+    font-weight: 600;
+}
+
+@media (min-width:768px) {
+    .navbar-cart {
+        margin: 0 24px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar-cart {
+        margin-right: 16px;
+    }
+
+    .navbar-list {
+        margin-top: 16px;
+    }
+}
+
+/* checkout-success-header */
+
+.checkout-success-header {
+    height: 460px;
+    background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=1347&q=80');
+    background-size: cover;
+    background-position: center center;
+}
+
+/* progress-step-bar */
+
+.progress-line::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    top: 25%;
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    background-color: #3F5D45;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    position: relative;
+    z-index: 2;
+}
+
+.dot-active {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+}
+
+.dot-complete {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    position: relative;
+    z-index: 2;
+}
+
+.dot-check {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -1px;
+    left: 3px;
+}
+
+/* step-bar-breakpoint */
+.step-bar {
+    position: relative;
+    width: 20%;
+}
+
+
+@media (max-width: 768px) {
+    .step-bar {
+        position: relative;
+        width: 30%;
+    }
+}
+
+
+/* checkout-success-progress-step-bar */
+
+.success-progress-line {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: #3F5D45;
+    top: 0;
+    z-index: 1;
+}
+
+.success-dot-complete {
+    width: 24px;
+    height: 24px;
+    background-color: #3F5D45;
+    border: 2px solid #3F5D45;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    position: relative;
+    z-index: 2;
+}
+
+.success-dot-check {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -1px;
+    left: 3px;
+}
+
+/* checkout content */
+
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-block {
+    background-color: #3F5D45;
+}
+
+.form-label {
+    font-size: 20px;
+    color: white;
+}
+
+/* invoice發票 */
+
+.invoice-btn {
+    height: 56px;
+    font-size: 20px;
+    border-radius: 0;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invoice-btn.active {
+    color: #3F5D45;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.invoice-btn:hover {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.input-box {
+    border-radius: 0;
+    height: 56px;
+    padding: 16px;
+    background-color: #EAF0ED;
+}
+
+/* nextstep-btn */
+
+.nextstep-block {
+    width: 100%;
+    height: 65px;
+    background-color: #FFE180;
+}
+
+.nextstep-block-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 65px;
+    font-weight: bold;
+}
+
+/* checkout-finish */
+
+.checkout-finish-btn {
+    width: 300px;
+    height: 65px;
+    border-radius: 0;
+    background-color: #FFE180;
+    color: #3F5D45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.checkout-finish-btn:hover {
+    background-color: #efd16e;
+    color: #3F5D45;
+}
+
+.btn {
+    --bs-btn-color: #3F5D45;
+}
+
+/* checkout-1-card */
+
+.bg-cover {
+    background-size: cover;
+    background-position: center center;
+    height: 110px;
+    width: 110px;
+}
+
+.product-info {
+    font-size: 20px;
+    color: #3F5D45;
+}
+
+.card {
+    border: 1px solid rgba(#3F5D45, .3);
+}
+
+.card-header {
+    background-color: #EAF0ED;
+    border: 0;
+    height: 65px;
+    font-size: 20px;
+    color: #3F5D45;
+}
+
+.card-body {
+    color: #3F5D45;
+}
+
+/* footer */
+
+.footer-fontsize {
+    font-size: 16px;
+    color: #3F5D45;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 0;
+    }
+}
+
+.custom-select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M7.247 7.014a.5.5 0 0 1 .707 0L10 9.057l2.047-2.047a.5.5 0 0 1 .707.708l-2.5 2.5a.5.5 0 0 1-.707 0l-2.5-2.5a.5.5 0 0 1 0-.707z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 30px 25px;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding-right: 2rem; /* Adjust padding to prevent text overlap with the arrow */
+}

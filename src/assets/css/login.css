@@ -1,0 +1,126 @@
+/* navbar */
+
+.navbar-nav {
+    --bs-nav-link-color: #9aae9e;
+    --bs-nav-link-hover-color: #3F5D45;
+    font-weight: 600;
+}
+
+@media (min-width:768px) {
+    .navbar-cart {
+        margin: 0 24px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navbar-cart {
+        margin-right: 16px;
+    }
+
+    .navbar-list {
+        margin-top: 16px;
+    }
+}
+
+.row-size {
+    padding: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+@media (max-width: 992px) {
+    .row-size {
+        padding: 0;
+    }
+}
+
+/* content */
+
+h1 {
+    color: white;
+    margin-top: 32px;
+}
+
+@media (max-width:768px) {
+    h1 {
+        color: white;
+        margin: 32px 0;
+    }
+}
+
+.login {
+    background-color: #3F5D45;
+
+}
+
+.connect {
+    background-color: #EAF0ED;
+    height: 350px;
+}
+
+input {
+    border: 0;
+}
+
+.textbox {
+    padding: 20px;
+    padding-left: 50px;
+    height: 56px;
+    background-color: #EAF0ED;
+}
+
+.btn {
+    height: 100%;
+}
+
+.login-btn {
+    width: 100%;
+    height: 65px;
+    margin-top: -30px;
+    background-color: #FFE180;
+}
+
+.login-btn-a {
+    font-size: 24px;
+    color: #3F5D45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connect-btn {
+    background-color: white;
+    --bs-btn-active-bg: rgb(233, 233, 233, .5);
+}
+
+.connect-btn:hover {
+    background-color: rgb(233, 233, 233, .8);
+}
+
+.form-check-input {
+    border-color: white;
+    background-color: #EAF0ED;
+}
+
+.form-check-input:checked {
+    background-color: #3F5D45;
+    border-color: white;
+}
+
+/* footer */
+
+.footer-fontsize {
+    font-size: 16px;
+    color: #3F5D45;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 0;
+    }
+}
